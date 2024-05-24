@@ -1,9 +1,5 @@
 version: '3.9'
 
-networks:
-  my-network:
-    external: true
-
 services:
   next-app:
     build: 
@@ -11,8 +7,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    networks:
-      - my-network
     volumes:
       - .:/app
     environment:
