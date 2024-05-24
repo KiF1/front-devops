@@ -26,4 +26,4 @@ jobs:
       - name: Delete old container
         run: docker rm -f next-app-container
       - name: Run docker container
-        run: docker run -d -p 3333:3333 --name next-app-container abnerst/next
+        run: docker run -d -p 3000:3000 --name next-app-container abnerst/next
