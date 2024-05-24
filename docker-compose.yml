@@ -1,0 +1,19 @@
+version: '3.9'
+
+networks:
+  my-network:
+    external: true
+
+services:
+  next-app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - my-network
+    volumes:
+      - .:/app
+    environment:
+      NEXT_PUBLIC_GITHUB_CLIENT_ID: bce6d84e17efad8b028c
